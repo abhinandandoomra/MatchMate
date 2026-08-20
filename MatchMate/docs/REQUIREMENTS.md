@@ -33,17 +33,6 @@ Every line of the brief, mapped to where it is implemented and what proves it.
 | Unit tests for the ViewModel | ✅ `ViewModelTests`, `MatchListStateTests`, `DecisionConcurrencyTests` |
 | Error handling: API, DB, connectivity | ✅ typed per service, contextual UI |
 
-## Grading areas the brief names
-
-| Area | Weight | What was done |
-|---|---|---|
-| Architecture / boundaries | 25% | Infrastructure with zero app references; every seam a protocol; domain-free views |
-| Offline + DB + status across screens | 25% | DB as sole source of truth; disagreement structurally unrepresentable; durability tested |
-| Pagination + list/detail UX | 15% | Derived cursor that cannot desync; stable ordering; contextual error states |
-| Code quality | 15% | No literals in views; no `nonisolated(unsafe)` or `@unchecked Sendable`; Swift 6 strict concurrency clean |
-| Unit tests | 15% | 137 tests, 95.0% of non-view code |
-| README & commit history | 5% | This folder, plus incremental commits |
-
 ## Deliberately out of scope
 
 Pull-to-refresh · search / filter / sort · Accepted-Declined tabs · any server write (no
